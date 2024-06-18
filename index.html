@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Creativo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        header {
+            text-align: center;
+            background: linear-gradient(135deg, #ff7e5f 10%, #feb47b 100%);
+            padding: 50px 0;
+            color: white;
+            font-family: 'Pacifico', cursive;
+            font-size: 4em;
+            animation: fadeIn 2s ease-in-out;
+            position: relative;
+            letter-spacing: 2px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 150px;
+            background: url('https://svgshare.com/i/_s5.svg') no-repeat;
+            background-size: cover;
+        }
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2c2c2c;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            animation: slideIn 1s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 4s infinite ease-in-out;
+        }
+        @keyframes rise {
+            from { bottom: -100px; opacity: 0; }
+            to { bottom: 100%; opacity: 1; }
+        }
+        .bubble:nth-child(2) { width: 20px; height: 20px; left: 20%; animation-duration: 3s; }
+        .bubble:nth-child(3) { width: 25px; height: 25px; left: 40%; animation-duration: 5s; }
+        .bubble:nth-child(4) { width: 30px; height: 30px; left: 60%; animation-duration: 4.5s; }
+        .bubble:nth-child(5) { width: 35px; height: 35px; left: 80%; animation-duration: 6s; }
+        .imagen {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+            margin: 10px;
+        }
+        .imagen:hover {
+            transform: scale(1.1);
+        }
+        .texto {
+            max-width: 600px;
+            text-align: center;
+            margin: 20px;
+        }
+        .texto h3 {
+            color: #feb47b;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .texto h2 {
+            color: #ff7e5f;
+            font-size: 1.5em;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            background-color: #ff7e5f;
+            border: none;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button i {
+            margin-left: 10px;
+        }
+        button:hover {
+            background-color: #e36753;
+            transform: translateY(-3px);
+        }
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: relative;
+            width: 100%;
+        }
+        .gif-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .gif-container img {
+            width: 300px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://source.unsplash.com/random/1920x1080?dark') no-repeat center center/cover;
+            filter: blur(8px);
+            animation: moveBg 20s linear infinite;
+        }
+        @keyframes moveBg {
+            0% { transform: scale(1) translateX(0); }
+            50% { transform: scale(1.1) translateX(-10%); }
+            100% { transform: scale(1) translateX(0); }
+        }
+        .parallax {
+            background-image: url('https://source.unsplash.com/random?nature');
+            height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+        .parallax-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 3em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+
+<header>✨ Bienvenidos ✨
+    <div class="wave"></div>
+</header>
+
+<div class="parallax">
+    <div class="parallax-text">Explora Nuestros Proyectos</div>
+</div>
+
+<div class="contenedor">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <img class="imagen" src="C:\Users\PC\Downloads\eco.png" alt="Eco Image">
+    <div class="texto">
+        <h3>Plantel CEB 6/13</h3>
+        <h2>Esta página está realizada con la finalidad de</h2>
+        <p>demostrar los proyectos y trabajos realizados en las</p>
+        <p>materias de Páginas Web, Ciencias de la salud y Ecología.</p>
+    </div>
+    <img class="imagen" src="C:\Users\PC\Downloads\saludd.png" alt="Salud Image">
+</div>
+
+<div class="gif-container">
+    <img src="C:\Users\PC\Downloads\gifintro.gif" alt="Intro GIF">
+</div>
+
+<div class="btn-container">
+    <form action="C:\Users\PC\Downloads\Páginas.html">
+        <button type="submit">Páginas web<i class="fas fa-laptop"></i></button>
+    </form>
+    <form action="C:\Users\PC\Downloads\Ciencias.html">
+        <button type="submit">Ciencias de la salud <i class="fas fa-heartbeat"></i></button>
+    </form>
+    </form>
+    <form action="C:\Users\PC\Downloads\Ecología.html">
+        <button type="submit">Ecología<i class="fas fa-leaf"></i></button>
+    </form>
+
+</div>
+
+<div class="footer">
+    <p>Hecho por: JCR♡</p>
+<br></br>
+<p>Jacqueline Rodríguez Varela 601</p>
+</div>
+
+<div class="animated-bg"></div>
+
+</body>
+</html>		
